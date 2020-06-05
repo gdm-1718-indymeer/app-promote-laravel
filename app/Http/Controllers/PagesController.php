@@ -9,7 +9,8 @@ class PagesController extends Controller
 {
     public function show($slug)
     {
-        $page = Page::findBySlug($slug);
-        return view ('page.show', ['page' => $page]);
+        $page = \App\Page::where('slug', $slug)->firstOrFail();
+
+        //return view ('page.show', ['page' => $page]);
     }
 }

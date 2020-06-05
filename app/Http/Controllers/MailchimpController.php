@@ -23,9 +23,29 @@ class MailchimpController extends Controller
         return redirect('newsletter')->with('status', 'you are already subscribed');
     }
 
-    public function showMembers()
+    public static function showMembers()
     {
-        return Newsletter::getmembers();
+        $total =  Newsletter::getMembers()['total_items'];
+
+        $parameters = ['count' => $total];
+        
+        return Newsletter::getMembers($string = '', $parameters)['members'];  
+    }
+
+    public function update($variable, $value)
+    {
+
+        if ($variable == "APP_NAME" ||  $variable ==  "MAIL_FROM_NAME") {
+            $value = "\"$value\"";
+        }
+
+        $values = array(
+            $variable=>$value
+            );
+        $this->setEnvironmentValue($values);
+
+        Artisan::call('config:clear');
+        return true;
     }
 
 }

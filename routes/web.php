@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('welcome');
 });
 
@@ -21,17 +21,15 @@ Route::get('/blog', function () {
     $posts = App\Post::all();
     return view('pages/blog', compact('posts'));});
 
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/mollie-payment','ShopController@preparePayment')->name('mollie.payment');
-Route::get('/payment-success','ShopController@paymentSuccess')->name('payment.success');
+    
+Route::get('/mollie-payment', 'ShopController@preparePayment')->name('mollie.payment');
+Route::get('/payment-success', 'ShopController@paymentSuccess')->name('payment.success');
 Route::post('/webhooks/mollie', 'ShopController@handle')->name('webhooks.mollie');
 
 
 /*Route::get('{slug}', 'PagesController@show');*/
 
-Route::get ('/newsletter', 'MailchimpController@index')->name('newsletter');
+Route::get('/newsletter', 'MailchimpController@index')->name('newsletter');
 Route::post('/newsletter', 'MailchimpController@store')->name('newsletter');
 
 
@@ -53,3 +51,5 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Auth::routes();
+
+Route::get('/{slug}', 'PagesController@show')->name('page');
