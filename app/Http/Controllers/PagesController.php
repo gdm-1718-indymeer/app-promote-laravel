@@ -11,6 +11,6 @@ class PagesController extends Controller
     {
         $page = \App\Page::where('slug', $slug)->firstOrFail();
 
-        //return view ('page.show', ['page' => $page]);
+        return view ('front.page.show', ['page' => $page]);
     }
 }

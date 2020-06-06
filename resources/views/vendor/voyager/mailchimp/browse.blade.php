@@ -12,30 +12,26 @@
 @section('content')
 @inject('provider', 'App\Http\Controllers\MailchimpController')
 
-    <form style="margin-bottom: 200px;">
-        
-        <div class="form-group mx-sm-3 mb-2">
-            <label for="staticEmail" class="col-md-2 col-form-label text-center"><b>API</b></label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="staticEmail" placeholder="{{ config('newsletter.apiKey') }} ">
-            </div>
-
+<div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Current Mailchimp API</h5>
+          <p class="card-text">{{ setting('mailchimp.mailchimpApi') }}</p>
+          <a href="{{ url('admin/settings') }}" class="btn btn-primary">Edit in settings</a>
         </div>
-        <div class="form-group mx-sm-3 mb-2">
-            <label for="inputPassword" class="col-md-2 col-form-label text-center"><b>LIST ID</b></label>
-            <div class="col-sm-10">
-                <input type="password" class="form-control" id="inputPassword" placeholder="{{ config('newsletter.lists.subscribers.id') }} ">
-            </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Current Mailchimp List ID</h5>
+          <p class="card-text">{{ setting('mailchimp.mailchimpList') }}</p>
+          <a href="{{ url('admin/settings') }}" class="btn btn-primary">Edit in settings</a>
         </div>
-        <div class="form-group mx-sm-3 mb-2">
-            <label for="inputPassword" class="col-sm-2 col-form-label"></label>
-            <div class="col-sm-10">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </div>
-
-        {{ csrf_field() }}
-    </form>
+      </div>
+    </div>
+  </div>
 
     <table class="table table-striped " >
         <thead>

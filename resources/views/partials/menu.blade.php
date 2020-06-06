@@ -9,7 +9,7 @@
 
         <div id="navigationWrap">
             <div class="container menu">
-            <nav>
+            <nav class="overlay-menu">
                 <ul>
                     
     @php

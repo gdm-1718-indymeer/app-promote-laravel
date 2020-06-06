@@ -43,11 +43,12 @@
 					<h4>Newsletter</h4>
 					<p>You can trust us. we only send promo offers,</p>
 					<div class="form-wrap" id="mc_embed_signup">
-                        <form target="_blank" action="{{ url('newsletter') }}" method="post" class="form-inline">
+						<form target="_blank" action="{{ url('newsletter') }}" method="post" class="form-inline">
+							{{ csrf_field() }}
+
                                 <input class="form-control" placeholder="Your Email Address" type="email" name="user_email" id="exampleInputEmail" class="form-control">
                           
-                            {{ csrf_field() }}
-                            <button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
+                            <button class="click-btn btn btn-default"><i class="fa fa-chevron-right"></i></button>
                             <div style="position: absolute; left: -5000px;">
 								<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
 							</div>
@@ -103,7 +104,7 @@
     <!-- End Footer Area -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-<script src="js/custom-scripts.js"></script>
+<script src="/js/custom-scripts.js"></script>
 
 </body>
 

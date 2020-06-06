@@ -8,8 +8,12 @@ use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
 {
-    public function getContact(){
-        return view('pages.contact');
+    public function index(){
+        $page = \App\Page::where('slug', 'contact')->firstOrFail();
+        return view('front.contact.index', [
+            'page' => $page,
+        ]);
+
     }
 
     public function postContact(Request $r){

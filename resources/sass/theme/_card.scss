@@ -1,0 +1,233 @@
+.cards_donates img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+  
+.break {
+    width:100%;
+   margin: 0 auto;
+    border-top: solid 1px;
+    border-bottom:0;
+    border-left: 0;
+    border-right:0;
+    border-image-source: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+    border-image-slice: 1;
+    padding-bottom: 30px;
+  }  
+  
+  .vectors {
+    padding-left: 30px;
+    display: inline-block;
+    padding-bottom: 20px;
+  }
+  
+  .vectors img {
+    width: 45px;
+    border-radius: 50%;
+    background: lightblue;
+    margin-right: 5px;
+  }  
+
+  .cards_donates {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cards_item {
+    display: flex;
+    padding: 1rem;
+  }
+  
+  @media (min-width: 40rem) {
+    .cards_item {
+      width: 50%;
+    }
+  }
+  
+  @media (min-width: 56rem) {
+    .cards_item {
+      width: 33.3333%;
+    }
+  }
+  
+  .card_container {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .card_content {
+    padding: 1rem;
+  }
+  
+  .card_title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+  }
+  
+  .card_text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;    
+    font-weight: 400;
+  }
+
+ 
+.donate {
+    background: #FFF;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px #888;
+    height: 320px;
+    padding: 0 10px 0 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    &__container {
+          /* max-width: 595px; */
+          padding: 0 0 65px 0px;
+          width: 100%;
+          /* display: flex; */
+          /* flex-wrap: unset; */
+          flex: 0 1 calc(46% - 1em);
+    }
+    
+    // url('http://www.mantiqueiratur.com.br/site/wp-content/uploads/2016/03/7site-2.jpg');
+    &__img {
+        background: #e64d3a;
+        background-size: 190px 250px;
+        box-shadow: 5px 5px 15px #E66D5A;
+        border: none;
+        outline: none;
+        border-radius: 18px;
+        height: 200px;
+        width: 150px;
+        min-width: 100px;
+        transform: translateX(-51px);
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+    
+    &__pagination {
+      
+      &__item {
+        background: #CCC;
+        border-radius: 25px;
+        height: 8px;
+        margin-top: 5px;
+        width: 8px;
+        
+        &--active {
+          background: #e64d3a;
+          border-radius: 25px;
+          height: 20px;
+        }
+      }
+    }
+    
+    &__content {
+      display: flex;
+      flex-direction: column;
+      height: 250px;
+      width: calc(100% - 250px);
+      transform: translateX(-20px);
+      
+      &__date {
+        color: #666;
+        font-size: .63em;
+        margin-top: 35px;
+      }
+      
+      &__title {
+        color: #444;
+        font-size: 1em;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      
+      &__text {
+        color: #777;
+        height: 100px;
+        font-size: .75em;
+        margin-top: 15px;
+        overflow-y: auto;
+      }
+      
+      &__button {
+      /* align-self: center; */
+        background: #e64d3a;
+        border: 0;
+        border-radius: 20px;
+        color: #FFF;
+        font-size: 0.7em;
+        font-weight: bold;
+        margin-top: 10px;
+        padding: 10px;
+        text-transform: uppercase;
+        width: 120px;
+        text-align: center;
+      }
+    }
+  }
+  
+  @media(max-width: 600px) {
+    .donate {
+      flex-direction: column;
+      height: 350px;
+      padding: 0;
+      
+      &__container {
+        width: 100%;
+        padding: 60px 0 0 0;
+      }
+      
+      &__img {
+        min-width: 0;
+        width: 80%;
+        max-width: 300px;
+        min-height: 180px;
+        transform: translate(0, -60px);
+      }
+      
+      &__content {
+        height: 350px;
+        margin: 0;
+        min-height: 180px;
+        padding: 10px;
+        transform: translate(0, -40px);
+        width: 80%;
+        
+        &__date{
+          margin: 0;
+        }
+      }
+      
+      &__pagination {
+        transform: translate(0, -245px);
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        
+        &__item {
+          margin: 0 5px;
+          
+          &--active {
+            height: 8px;
+            width: 20px;
+          }
+        }
+      }
+    }
+  }

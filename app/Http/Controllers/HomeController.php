@@ -23,7 +23,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $page =  \App\Page::where('slug','=','home')->firstOrFail();
+        return view(
+            'welcome',
+            [
+                'page' => $page,
+            ]
+          );
     }
 
   

@@ -9,10 +9,25 @@ use App\Donate;
 class ShopController extends Controller
 {
 
+  public function show()
+  {
+    $page =  \App\Page::where('slug','=','donates')->firstOrFail();
+    $donates = \App\Donate::where('message_public', true)->paginate($page['pagination']);
 
+    return view(
+      'front.donates.index',
+      [
+          'page' => $page,
+          'donates' => $donates,
+      ]
+    );
+  }
 
-    public function preparePayment( )
+    public function preparePayment(Request $r )
     {
+
+    dd($r);
+
     $payment = Mollie::api()->payments()->create([
         'amount' => [
           'currency' => 'EUR',

@@ -10,6 +10,7 @@
     z-index: 1;
     overflow: hidden;
     margin-bottom: 0px;
+    box-shadow: 2px 1px 27px 0px rgba(0, 0, 50, 0.50);
     .banner_inner {
         background: #04091e;
         position: relative;
@@ -17,7 +18,7 @@
         width: 100%;
         min-height: 780px;
         z-index: 1;
-        .overlay {
+        .overlay_header {
             background: url( /storage/storage/img/banner-2.jpg) no-repeat scroll center center;
             opacity: .5;
             height: 125%;

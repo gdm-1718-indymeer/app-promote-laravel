@@ -49683,6 +49683,8 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./custom-scripts */ "./resources/js/custom-scripts.js");
+
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
  * The following block of code may be used to automatically register your
@@ -49818,6 +49820,72 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/custom-scripts.js":
+/*!****************************************!*\
+  !*** ./resources/js/custom-scripts.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+  'use strict';
+
+  var navigation = new TimelineLite({
+    paused: true,
+    reversed: true
+  });
+  navigation.to("#navigationWrap", 0.5, {
+    opacity: 1,
+    display: 'block'
+  }).to(".navbar", 0.3, {
+    opacity: 0
+  }, "-=0.1").to(".close", 0.3, {
+    display: "block",
+    opacity: 1
+  }, "-=0.1").from(".menu", 0.5, {
+    opacity: 0,
+    y: 30
+  }).from(".social", 0.5, {
+    opacity: 0
+  });
+  $(".navbar, .close").click(function () {
+    navigation.reversed() ? navigation.play() : navigation.reverse();
+  });
+  var calculateHeight;
+
+  calculateHeight = function calculateHeight() {
+    var $content, contentHeight, finalHeight, windowHeight;
+    $content = $('#overlay-content');
+    contentHeight = parseInt($content.height()) + parseInt($content.css('margin-top')) + parseInt($content.css('margin-bottom'));
+    windowHeight = $(window).height();
+    finalHeight = windowHeight > contentHeight ? windowHeight : contentHeight;
+    return finalHeight;
+  };
+
+  $(document).ready(function () {
+    $(window).resize(function () {
+      if ($(window).height() < 560 && $(window).width() > 600) {
+        $('#overlay').addClass('short');
+      } else {
+        $('#overlay').removeClass('short');
+      }
+
+      return $('#overlay-background').height(calculateHeight());
+    });
+    $(window).trigger('resize'); // open
+
+    $('#popup-trigger').click(function () {
+      return $('#overlay').addClass('open').find('.signup-form input:first').select();
+    }); // close
+
+    return $('#overlay-background,#overlay-close').click(function () {
+      return $('#overlay').removeClass('open');
+    });
+  });
+}(jQuery));
 
 /***/ }),
 
