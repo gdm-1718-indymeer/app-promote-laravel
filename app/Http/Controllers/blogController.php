@@ -17,6 +17,7 @@ class blogController extends Controller
         
 
         $posts = \App\Post::orderBy('created_at', 'asc')->paginate($itemsPerPage[0]);
+      
         return view(
             'front.post.index',
             [

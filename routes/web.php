@@ -21,6 +21,7 @@ Route::get('/{locale}', function ($locale) {
     App::setLocale($locale);
 
 });
+
 Route::get('/', function () {
     return redirect(url('/en'))->with('status', 'Profile updated!');
 });

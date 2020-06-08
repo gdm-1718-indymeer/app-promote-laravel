@@ -56,7 +56,7 @@
         
           
         <li class="{{ $isActive }} mr-6">
-            <a href="{{ url('{locale}'.$item->link()) }}" target="{{'{locate}' .$item->target }}" style="{{ $styles }}">
+            <a href="{{ url(app()->getLocale() . $item->link()) }}" target="{{ $item->target }}" style="{{ $styles }}">
                 {!! $icon !!}
                 <span>{{ $item->title }}</span>
             </a>
@@ -87,5 +87,15 @@
 </div>
 </div>
 </div>
+<!-- Right Side Of Navbar -->
+<ul class="language">
+    @foreach (config('voyager.multilingual.locales') as $locale)
+        <li class="breadcrumb-item">
+            <a class=""
+               href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), $locale) }}"
+                @if (app()->getLocale() == $locale) style="font-weight: bold; text-decoration: underline" @endif>{{ strtoupper($locale) }}</a>
+        </li>
+    @endforeach
+</ul>
 </header>
     
