@@ -3,7 +3,7 @@
 @section('title', $page->getTranslatedAttribute('title', $locale))
 
 @section('content')
-@include('components.header')
+@include('components.headerToggle')
 
 @component('front.contact.component',
 [

@@ -92,7 +92,7 @@
     @foreach (config('voyager.multilingual.locales') as $locale)
         <li class="breadcrumb-item">
             <a class=""
-               href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), $locale) }}"
+               href="{{ url($locale, \Illuminate\Support\Facades\Route::currentRouteName()) }}"
                 @if (app()->getLocale() == $locale) style="font-weight: bold; text-decoration: underline" @endif>{{ strtoupper($locale) }}</a>
         </li>
     @endforeach

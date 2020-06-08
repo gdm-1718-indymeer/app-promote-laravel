@@ -49,7 +49,27 @@
     padding: 0 1rem;
     position: absolute;
     top: 8rem;
-    left: 44%;
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+
+    transform: translate(-50%, -50%); 
+}
+.header-banner p {
+  background-color: rgba(18,72,120, 0.8);
+  color: #fff;
+  padding: 0 1rem;
+  position: absolute;
+  top: 13rem;
+
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+
+  transform: translate(-50%, -50%); 
+}
+
+.page-body{
+  padding: 44px;
+  margin-top:20px;
+background-color: #fff;
+box-shadow: 0 5px 15px #888;
 }
 
 #navigationWrap {

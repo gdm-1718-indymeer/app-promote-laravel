@@ -5,6 +5,8 @@ namespace App;
 use TCG\Voyager\Traits\Resizable;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
+use Illuminate\Support\Facades\Auth;
+
 
 
 class Page extends \TCG\Voyager\Models\Page

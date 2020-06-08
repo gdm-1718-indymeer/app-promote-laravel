@@ -52,4 +52,4 @@ Route::group(['prefix' => 'admin'], function () {
 
 Auth::routes();
 
-Route::get('/{slug}', 'PagesController@show')->name('page');
+Route::get('{locale}/{slug}', 'PagesController@show')->name('page');

@@ -5,7 +5,7 @@
 
 @section('content')
 
-@include('components.header')
+@include('components.headerToggle')
 
 <div class="container">
     <section class="row cards flex flex-wrap">

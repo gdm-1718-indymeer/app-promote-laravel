@@ -9,9 +9,9 @@ use TCG\Voyager\Traits\Translatable;
 class PagesController extends Controller
 {
 
-    public function show($slug, $locale)
+    public function show($locale, $slug)
     {
-        $page = \App\Page::where('slug', $slug)->firstOrFail();
+        $page = \App\Page::where('slug', '=', $slug)->firstOrFail();
 
         return view ('front.page.show', ['page' => $page,'locale' => $locale,]);
     }

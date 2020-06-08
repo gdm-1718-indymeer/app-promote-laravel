@@ -4,9 +4,8 @@
 @section('title', 'posts')
 
 @section('content')
-<div class="header-banner">
-    <h1>Berichten</h1>
-</div>
+@include('components.headerToggle')
+
 <div class="container">
     <section class="row cards flex flex-wrap">
         @foreach ($posts as $post)
