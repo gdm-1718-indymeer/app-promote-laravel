@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Page;
 use Illuminate\Http\Request;
+use TCG\Voyager\Traits\Translatable;
 
 class PagesController extends Controller
 {
-    public function show($slug)
+
+    public function show($slug, $locale)
     {
         $page = \App\Page::where('slug', $slug)->firstOrFail();
 
-        return view ('front.page.show', ['page' => $page]);
+        return view ('front.page.show', ['page' => $page,'locale' => $locale,]);
     }
 }

@@ -3,16 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use TCG\Voyager\Traits\Translatable;
 use App\Post;
 
 class blogController extends Controller
 {
-    public function index()
+    public function index($locale)
     {
         // settings
         //App\Post::all()
 
-        $itemsPerPage =  \App\Page::where('slug','=','contact')->pluck('pagination');
+        $itemsPerPage =  \App\Page::where('slug','=','blog')->pluck('pagination');
         
 
         $posts = \App\Post::orderBy('created_at', 'asc')->paginate($itemsPerPage[0]);
@@ -20,6 +21,7 @@ class blogController extends Controller
             'front.post.index',
             [
                 'posts' => $posts,
+                'locale' => $locale,
             ]
         );
     }

@@ -16,8 +16,9 @@
     
         if (Voyager::translatable($items)) {
             $items = $items->load('translations');
+            
         }
-    
+      
     @endphp
     
     @foreach ($items as $item)
@@ -55,7 +56,7 @@
         
           
         <li class="{{ $isActive }} mr-6">
-            <a href="{{ url($item->link()) }}" target="{{ $item->target }}" style="{{ $styles }}">
+            <a href="{{ url('{locale}'.$item->link()) }}" target="{{'{locate}' .$item->target }}" style="{{ $styles }}">
                 {!! $icon !!}
                 <span>{{ $item->title }}</span>
             </a>

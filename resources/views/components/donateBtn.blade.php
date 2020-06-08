@@ -16,10 +16,13 @@
 					<input id="signup-name" type="text" name="name" autocomplete="off"/>
 					<label for="signup-email">Email Address</label>
 					<input id="signup-email" type="email" name="email" autocomplete="off"/>
-					<label for="signup-pw">Password</label>
-					<input id="signup-pw" type="password" name="pw" autocomplete="off"/>
-					<label for="signup-cpw">Confirm Password</label>
-					<input id="signup-cpw" type="password" name="cpw" autocomplete="off"/>
+					<label for="signup-number">Amount of donation</label>
+					<input id="signup-number" type="number" name="number"  min="10"autocomplete="off"/>
+					<label for="signup-message">Message</label>
+					<input id="signup-message" type="text" name="message" required autocomplete="off"/>
+					<input type="hidden" name="public" value="0" />
+					<input style="width:6%; height:15px; " type="checkbox" name="public" value='1'>
+					<label for="checkbox"> Do you want this message public?</label>
 					<button class="btn btn-outline submit-btn"><span>signup</span></button>
 				  </form>
 				</div>

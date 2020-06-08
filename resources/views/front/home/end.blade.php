@@ -2,7 +2,7 @@
 	<section class="about-area">
 		<div class="container">
 			<div class="row align-items-center">
-                {!! $page->body_extra !!}
+                {!! $page->getTranslatedAttribute('body_extra', $locale)!!}
 			</div>
 		</div>
 	</section>

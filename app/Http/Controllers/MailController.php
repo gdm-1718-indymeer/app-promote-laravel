@@ -8,10 +8,12 @@ use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
 {
-    public function index(){
+    public function index($locale){
         $page = \App\Page::where('slug', 'contact')->firstOrFail();
         return view('front.contact.index', [
             'page' => $page,
+            'locale' => $locale,
+
         ]);
 
     }

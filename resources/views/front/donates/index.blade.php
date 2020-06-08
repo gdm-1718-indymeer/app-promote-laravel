@@ -1,7 +1,7 @@
 
 @extends('layouts.layout')
 
-@section('title', $page->title)
+@section('title', $page->getTranslatedAttribute('title', $locale))
 
 @section('content')
 

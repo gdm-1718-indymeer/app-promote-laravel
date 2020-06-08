@@ -9,16 +9,19 @@ use App\Donate;
 class ShopController extends Controller
 {
 
-  public function show()
+
+  public function show($locale)
   {
     $page =  \App\Page::where('slug','=','donates')->firstOrFail();
-    $donates = \App\Donate::where('message_public', true)->paginate($page['pagination']);
+    $page->translate($locale);
 
+    $donates = \App\Donate::where('message_public', true)->paginate($page['pagination']);
     return view(
       'front.donates.index',
       [
           'page' => $page,
           'donates' => $donates,
+          'locale' => $locale,
       ]
     );
   }
@@ -26,24 +29,23 @@ class ShopController extends Controller
     public function preparePayment(Request $r )
     {
 
-    dd($r);
-
-    $payment = Mollie::api()->payments()->create([
+      $payment = Mollie::api()->payments()->create([
         'amount' => [
           'currency' => 'EUR',
-          'value' => '25.00', 
+          'value' => $r->number . '.00', 
         ],
-        "description" => "New Donation!",
+        "description" => "New Donation arrived by " . $r->name,
         'redirectUrl' => route('payment.success'),
          'webhookUrl'   => route('webhooks.mollie'),
       ]);
 
       $donate = new Donate;
       $donate->payment_id = $payment->id;
-      $donate->donater_name = 'Pieter';
-      $donate->payment_amount ='45';
-      $donate->message='misschien';
-      $donate->message_public= false;
+      $donate->donater_name = $r->name;
+      $donate->email = $r->email;
+      $donate->payment_amount = $r->number;
+      $donate->message= $r->message;
+      $donate->message_public= $r->public;
       $donate->payment_status = 'Pending';
 
       $donate->save();
@@ -69,7 +71,6 @@ class ShopController extends Controller
       }
 
       public function paymentSuccess() {
-        echo 'payment has been received';
-
+        return view('front.donates.index');
     }
 }

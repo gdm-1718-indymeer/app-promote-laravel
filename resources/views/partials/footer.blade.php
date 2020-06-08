@@ -46,6 +46,7 @@
 						<form target="_blank" action="{{ url('newsletter') }}" method="post" class="form-inline">
 							{{ csrf_field() }}
 
+							
                                 <input class="form-control" placeholder="Your Email Address" type="email" name="user_email" id="exampleInputEmail" class="form-control">
                           
                             <button class="click-btn btn btn-default"><i class="fa fa-chevron-right"></i></button>

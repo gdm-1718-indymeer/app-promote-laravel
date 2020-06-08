@@ -17,6 +17,7 @@ class CreateDonatesTable extends Migration
             $table->id();
             $table->string('payment_id');
             $table->string('donater_name');
+            $table->string('email');
             $table->integer('payment_amount');
             $table->string('message');
             $table->string('message_public');

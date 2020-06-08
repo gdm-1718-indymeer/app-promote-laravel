@@ -1,4 +1,4 @@
-@include('partials.header')
+@include('partials.header',  ['locale' => $locale])
 
 
 <div class="content">

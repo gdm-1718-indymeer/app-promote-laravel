@@ -1,7 +1,7 @@
 	<!-- start banner Area -->
 	<section class="home-banner-area">
 		<div class="container">
-            {!! $page->body !!}
+            {!! $page->getTranslatedAttribute('body_header', $locale) !!}
 
 		</div>
 	</section>

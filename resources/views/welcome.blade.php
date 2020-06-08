@@ -1,21 +1,26 @@
-@extends('layouts.layout')
+@extends('layouts.layout', ['locale' => $locale])
 
 @section('title', 'home')
 
 @section('content')
 
 @component('front.home.banner',  [
-	'page' => $page
+	'page' => $page,
+	'locale' => $locale
 ])
 @endcomponent
 
 @component('front.home.mid',[
-	'page' => $page
+	'page' => $page,
+	'locale' => $locale
+
 ])
 @endcomponent
 
 @component('front.home.end', [
-	'page' => $page
+	'page' => $page,
+	'locale' => $locale
+
 ])
 @endcomponent
 

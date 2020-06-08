@@ -17,5 +17,5 @@
 </head>
 
 <body>
-   
+
         {{ menu('posts' , 'partials.menu') }}
