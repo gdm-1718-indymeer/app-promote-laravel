@@ -87,12 +87,12 @@
 </div>
 </div>
 </div>
-<!-- Right Side Of Navbar -->
+<!-- Right Side Of Navbar url($locale, Request::segment(count(Request::segments())) -->
 <ul class="language">
     @foreach (config('voyager.multilingual.locales') as $locale)
         <li class="breadcrumb-item">
             <a class=""
-               href="{{ url($locale,Request::segment(count(Request::segments()))) }}"
+               href="{{ url($locale, Request::segment(2)) }}"
                 @if (app()->getLocale() == $locale) style="font-weight: bold; text-decoration: underline" @endif>{{ strtoupper($locale) }}</a>
         </li>
     @endforeach

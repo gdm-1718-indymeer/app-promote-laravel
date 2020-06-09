@@ -26,6 +26,7 @@ Route::get('/', function () {
     return redirect(url('/en'))->with('status', 'Profile updated!');
 });
 
+
 Route::get('{locale}/', 'homeController@index')->name('home');
 Route::get('{locale}/home', 'homeController@index')->name('home');
 
@@ -52,4 +53,4 @@ Route::group(['prefix' => 'admin'], function () {
 
 Auth::routes();
 
-Route::get('{locale}/{slug}', 'PagesController@show')->name('page');
+Route::get('{locale}/{slug}', 'PagesController@show')->name('{slug}');

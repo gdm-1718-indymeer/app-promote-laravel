@@ -8,20 +8,19 @@
 					<img src=" /{{ setting('site.logo') }}" width="100px" >
 				</div>
 				<div class="col-lg-4 col-md-6 single-footer-widget">
-					<h4>Quick Links</h4>
+					<h4>@lang('footer.links')</h4>
 				{{menu('posts' , 'partials.footerMenu')}}				
 				</div>
 		
 				<div class="col-lg-4 col-md-6 single-footer-widget">
-					<h4>Newsletter</h4>
-					<p>Subscribe now, you can trust us. we only send promo offers.</p>
+					<h4>@lang('footer.Newsletter')</h4>
+					<p>@lang('footer.subscribe')</p>
 					<div class="form-wrap" id="mc_embed_signup">
 						<form target="_blank" action="{{ url('newsletter') }}" method="post" class="form-inline">
 							{{ csrf_field() }}
 
 							
-                                <input class="form-control" placeholder="Your Email Address" type="email" name="user_email" id="exampleInputEmail" class="form-control">
-                          
+                        <input class="form-control" placeholder="{{ __('footer.email') }}" type="email" name="user_email" id="exampleInputEmail" class="form-control">       
                             <button class="click-btn btn btn-default"><i class="fa fa-chevron-right"></i></button>
                             <div style="position: absolute; left: -5000px;">
 								<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
@@ -34,7 +33,7 @@
 				</div>
 			</div>
 			<div class="footer-bottom row align-items-center">
-				<p class="footer-text m-0 col-lg-6 col-md-12"> made with <i class="fa fa-heart-o" aria-hidden="true"></i> by Indy Meermans</p>
+				<p class="footer-text m-0 col-lg-6 col-md-12"> @lang('footer.made')</p>
 				<div class="col-lg-6 col-md-6 social-link">
 					<div class="download-button d-flex flex-row justify-content-end">
 						<div class="buttons gray flex-row d-flex">
