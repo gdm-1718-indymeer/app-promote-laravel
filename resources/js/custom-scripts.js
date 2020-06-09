@@ -13,7 +13,9 @@ $(document).ready(function () {
     navigation.reversed() ? navigation.play() : navigation.reverse();
   })
 
-  var calculateHeight;
+  
+});
+var calculateHeight;
 
   calculateHeight = function () {
     var $content, contentHeight, finalHeight, windowHeight;
@@ -23,7 +25,7 @@ $(document).ready(function () {
     finalHeight = windowHeight > contentHeight ? windowHeight : contentHeight;
     return finalHeight;
   };
-
+  
   $(document).ready(function () {
     $(window).resize(function () {
       if ($(window).height() < 560 && $(window).width() > 600) {
@@ -58,4 +60,3 @@ $(document).ready(function () {
 			localStorage.setItem('cookieconsent', true);
 		};
 	}
-} (jQuery) );

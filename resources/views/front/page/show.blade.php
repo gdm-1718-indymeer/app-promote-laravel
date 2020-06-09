@@ -6,7 +6,7 @@
 @include('components.headerToggle')
 {{-- Breadcrumbs::render('page',$page) --}}
 <div class="container ">
-    {!! $page->body !!}
+    {!! $page->getTranslatedAttribute('body', $locale) !!}
    
 </div>
 

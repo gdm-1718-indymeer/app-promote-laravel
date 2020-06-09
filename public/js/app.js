@@ -49681,9 +49681,9 @@ module.exports = function(module) {
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
-
 __webpack_require__(/*! ./custom-scripts */ "./resources/js/custom-scripts.js");
+
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
@@ -49854,48 +49854,48 @@ $(document).ready(function () {
   $(".navbar, .close").click(function () {
     navigation.reversed() ? navigation.play() : navigation.reverse();
   });
-  var calculateHeight;
+});
+var calculateHeight;
 
-  calculateHeight = function calculateHeight() {
-    var $content, contentHeight, finalHeight, windowHeight;
-    $content = $('#overlay-content');
-    contentHeight = parseInt($content.height()) + parseInt($content.css('margin-top')) + parseInt($content.css('margin-bottom'));
-    windowHeight = $(window).height();
-    finalHeight = windowHeight > contentHeight ? windowHeight : contentHeight;
-    return finalHeight;
-  };
+calculateHeight = function calculateHeight() {
+  var $content, contentHeight, finalHeight, windowHeight;
+  $content = $('#overlay-content');
+  contentHeight = parseInt($content.height()) + parseInt($content.css('margin-top')) + parseInt($content.css('margin-bottom'));
+  windowHeight = $(window).height();
+  finalHeight = windowHeight > contentHeight ? windowHeight : contentHeight;
+  return finalHeight;
+};
 
-  $(document).ready(function () {
-    $(window).resize(function () {
-      if ($(window).height() < 560 && $(window).width() > 600) {
-        $('#overlay').addClass('short');
-      } else {
-        $('#overlay').removeClass('short');
-      }
+$(document).ready(function () {
+  $(window).resize(function () {
+    if ($(window).height() < 560 && $(window).width() > 600) {
+      $('#overlay').addClass('short');
+    } else {
+      $('#overlay').removeClass('short');
+    }
 
-      return $('#overlay-background').height(calculateHeight());
-    });
-    $(window).trigger('resize'); // open
-
-    $('#popup-trigger').click(function () {
-      return $('#overlay').addClass('open').find('.signup-form input:first').select();
-    }); // close
-
-    return $('#overlay-background,#overlay-close').click(function () {
-      return $('#overlay').removeClass('open');
-    });
+    return $('#overlay-background').height(calculateHeight());
   });
+  $(window).trigger('resize'); // open
 
-  if (!localStorage.getItem('cookieconsent')) {
-    document.body.innerHTML += "\t\t<div class=\"cookieconsent\" style=\"position:fixed;padding:20px;left:0;bottom:0;background-color:#000;color:#FFF;text-align:center;width:100%;z-index:99999;\">\t\t\tThis site uses cookies. By continuing to use this website, you agree to their use. \t\t\t<a href=\"#\" style=\"color:#0f8;\">I Understand</a> | \t<a href=\"".concat(window.location.pathname.split('/')[1], "/privacy-policy\" style=\"color:#0f8;\">Privacy Policy</a>\n\t\t</div>\t\t");
+  $('#popup-trigger').click(function () {
+    return $('#overlay').addClass('open').find('.signup-form input:first').select();
+  }); // close
 
-    document.querySelector('.cookieconsent a').onclick = function (e) {
-      e.preventDefault();
-      document.querySelector('.cookieconsent').style.display = 'none';
-      localStorage.setItem('cookieconsent', true);
-    };
-  }
-}(jQuery));
+  return $('#overlay-background,#overlay-close').click(function () {
+    return $('#overlay').removeClass('open');
+  });
+});
+
+if (!localStorage.getItem('cookieconsent')) {
+  document.body.innerHTML += "\t\t<div class=\"cookieconsent\" style=\"position:fixed;padding:20px;left:0;bottom:0;background-color:#000;color:#FFF;text-align:center;width:100%;z-index:99999;\">\t\t\tThis site uses cookies. By continuing to use this website, you agree to their use. \t\t\t<a href=\"#\" style=\"color:#0f8;\">I Understand</a> | \t<a href=\"".concat(window.location.pathname.split('/')[1], "/privacy-policy\" style=\"color:#0f8;\">Privacy Policy</a>\n\t\t</div>\t\t");
+
+  document.querySelector('.cookieconsent a').onclick = function (e) {
+    e.preventDefault();
+    document.querySelector('.cookieconsent').style.display = 'none';
+    localStorage.setItem('cookieconsent', true);
+  };
+}
 
 /***/ }),
 

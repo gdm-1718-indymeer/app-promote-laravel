@@ -662,7 +662,8 @@ main {
 			cursor: pointer;
 			position: absolute;
 			top: 0;
-			right: 15px;
+            right: 15px;
+            color: #fff;
 			@extend .animate;
 			
 			&:hover {

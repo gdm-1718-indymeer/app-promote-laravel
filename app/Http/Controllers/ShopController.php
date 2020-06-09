@@ -35,7 +35,7 @@ class ShopController extends Controller
           'value' => $r->number . '.00', 
         ],
         "description" => "New Donation arrived by " . $r->name,
-        'redirectUrl' => route('payment.success'),
+        'redirectUrl' => url(app()->getLocale() . '/donates'),
          'webhookUrl'   => route('webhooks.mollie'),
       ]);
 
@@ -71,6 +71,7 @@ class ShopController extends Controller
       }
 
       public function paymentSuccess() {
-        return view('front.donates.index');
+        return \redirect(url(app()->getLocale() . '/donates'));
+
     }
 }

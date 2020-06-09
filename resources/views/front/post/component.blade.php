@@ -15,7 +15,7 @@
             </a>
             <div class="card__info">
                 <span class="card__category"> Blog post</span>
-                <h3 class="card__title">{{ $post->title }}</h3>
+                <h3 class="card__title">{{ $post->getTranslatedAttribute('title', $locale) }}</h3>
             </div>
             </article>   
       

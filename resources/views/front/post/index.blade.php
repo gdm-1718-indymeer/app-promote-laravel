@@ -10,7 +10,8 @@
     <section class="row cards flex flex-wrap">
         @foreach ($posts as $post)
             @component('front.post.component', [
-            'post' => $post
+            'post' => $post,
+            'locale' => $locale
             ])
             @endcomponent
         @endforeach

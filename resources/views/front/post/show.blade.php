@@ -10,9 +10,9 @@
 			<div class="row">
 				<div class=" col-md-offset-2" style="width: 100%">
 
-					<h1>{{ $post->title }}</h1>
+					<h1>{{ $post->getTranslatedAttribute('title', $locale) }}</h1>
 					<img src="{{ Voyager::image( $post->image ) }}" style="width:100%">
-					<p>{!! $post->body !!}</p>
+					<p>{!! $post->getTranslatedAttribute('body', $locale) !!}</p>
 
 				</div>
 			</div>

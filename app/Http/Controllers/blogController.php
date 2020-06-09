@@ -12,9 +12,10 @@ class blogController extends Controller
     {
       
         $page =  \App\Page::where('slug','=','blog')->firstOrFail();
-
+        //$posts = \App\Post::withTranslations($locale)->paginate($page['pagination']);
         $posts = \App\Post::orderBy('created_at', 'asc')->paginate($page['pagination']);
-      
+       // $posts->withTranslation($locale)->get;
+
         return view(
             'front.post.index',
             [

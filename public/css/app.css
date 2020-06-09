@@ -14176,6 +14176,7 @@ main {
   position: absolute;
   top: 0;
   right: 15px;
+  color: #fff;
 }
 
 .overlay .overlay-content .overlay-close:hover {
@@ -15663,6 +15664,13 @@ main {
   }
 }
 
+.footer-area .single-footer-widget .subscribebtn {
+  background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+  width: 40px;
+  height: 41px;
+  padding: 3px 12px;
+}
+
 .footer-area .single-footer-widget h4 {
   color: #fff;
   margin-bottom: 35px;
@@ -15729,7 +15737,6 @@ main {
   border-radius: 0;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
-  padding: 8px 12px;
   border: 0;
 }
 
@@ -16384,10 +16391,8 @@ textarea.input2 + .focus-input2::after {
   z-index: -1;
   width: 300%;
   height: 100%;
-  background: #db1563;
-  background: linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935);
+  background: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
   top: 0;
-  left: -100%;
   transition: all 0.4s;
 }
 

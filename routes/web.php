@@ -12,6 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
+
+Auth::routes();
+
 
 
 Route::get('/{locale}', function ($locale) {
@@ -46,11 +52,5 @@ Route::post('/newsletter', 'MailchimpController@store')->name('newsletter');
 
 Route::get('{locale}/contact', 'MailController@index')->name('contact');
 Route::post('/contact', 'MailController@postContact')->name('contact.save');
-
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
-
-Auth::routes();
 
 Route::get('{locale}/{slug}', 'PagesController@show')->name('{slug}');
