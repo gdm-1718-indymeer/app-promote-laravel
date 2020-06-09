@@ -21,7 +21,7 @@
 					</div>
 
 					<div class="wrap-input2 validate-input" data-validate = "Message is required">
-						<textarea class="input2" name="message"></textarea>
+						<textarea class="input2" name="content"></textarea>
 						<span class="focus-input2" data-placeholder="@lang('contact.message')"></span>
 					</div>
 

@@ -66,7 +66,7 @@
     <!-- End Footer Area -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-<script src="/js/custom-scripts.js"></script>
+<script src="/js/app.js"></script>
 
 </body>
 

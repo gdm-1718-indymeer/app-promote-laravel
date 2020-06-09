@@ -33,8 +33,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
 .header-banner {
-    background-color: #333;
-    background-image: url('https://images.unsplash.com/photo-1463316493949-26e71dfa441e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80');
+    background-color: $primary-color;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -43,19 +42,21 @@
 }
 
 .header-banner h1 {
-    background-color: rgba(18,72,120, 0.8);
+    background-color: rgba(0, 136, 255, 0.67);
     color: #fff;
-    padding: 0 1rem;
+    padding: 10px 3rem;
     position: absolute;
     top: 8rem;
-    left: 50%; /* position the left edge of the element at the middle of the parent */
-
-    transform: translate(-50%, -50%); 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 13px;
 }
 .header-banner p {
-  background-color: rgba(18,72,120, 0.8);
+  background-color:rgba(0, 136, 255, 0.67);
+  padding: 10px 3rem;
+  border-radius: 13px;
+
   color: #fff;
-  padding: 0 1rem;
   position: absolute;
   top: 13rem;
 
@@ -76,28 +77,38 @@ box-shadow: 0 5px 15px #888;
     width: 100%;
     min-height: 100vh;
     height: 100%;
-    background: black;
+    background: #000;
     opacity: 0;
     position: absolute;
     top: 0;
     padding: 50px 0;
     overflow: hidden;
+    font-family: $text-font;
+}
+.overlay-menu{
+  margin-top: 15%;
 }
 .overlay-menu ul {
     list-style-type: none;
     padding: 0;
+    text-align: center;
+}
+.close svg{
+  overflow: hidden;
+  vertical-align: middle;
+  fill: #fff;
+  /* font-size: 16px; */
+  width: 30px;
+  height: 50px;
 }
 .overlay-menu ul li {
     color: white;
-    font-size: 5vh;
+    font-size: 60px;
     text-transform: uppercase;
     overflow: hidden;
     font-weight: 700;
 }
-.overlay-menu ul li:first-child {
-    font-size: 8vh;
-    overflow: visible;
-}
+
 
 /*---------------------------------------------*/
 input {
@@ -395,9 +406,7 @@ textarea.input2 + .focus-input2::after {
     .overlay-menu ul li {
         font-size: 15vw;
    }
-   .overlay-menu ul li:first-child {
-        font-size: 8vw;
-   }
+ 
 }
 .overlay-menu a {
     color: white;
@@ -409,7 +418,10 @@ textarea.input2 + .focus-input2::after {
     text-decoration: none;
 }
 .overlay-menu a:hover {
-    color:#F24738;
+    color:$primary-color;
+}
+.social{
+  text-align: center;
 }
 .navbar {
     position: fixed;
@@ -442,7 +454,7 @@ textarea.input2 + .focus-input2::after {
     text-decoration: none;
 }
 .social a:hover {
-    color:#F24738;
+    color:$primary-color;
 }
 .fa {
     color: #484848;
@@ -455,7 +467,7 @@ textarea.input2 + .focus-input2::after {
     transition:.3s;
 }
 .fa:hover {
-    color:#F24738;
+    color:$primary-color;
 }
 
 

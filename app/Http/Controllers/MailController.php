@@ -22,22 +22,19 @@ class MailController extends Controller
         $data = [
             'name' => $r->name,
             'email' => $r->email,
-            'subject' => $r->subject,
+            'subject' => "shazam support",
             'content' => $r->content,
 
-        ];
-        
-        //return view('mails.contact', $data);
-  
+        ];  
 
         Mail::send('mails.contact', $data, function ($message)  use($r){
             $message->sender('indymeer@student.arteveldehs.be');
-            $message->to('indymeer@student.arteveldehs.be', 'Indy Meermans');
+            $message->to( setting('admin.admin_email'));
             $message->cc($r->email, $r->name);
-           // $message->bcc('frederick.roegiers@arteveldehs.be', 'Frederick Roegiers');
-            $message->subject($r->subject);
-            //$message->priority(3);
-            //$message->attach('pathToFile');
+            $message->subject('shazam support');
+           
         });
+
+     return \redirect(url(app()->getLocale() . '/contact'));
     }
 }

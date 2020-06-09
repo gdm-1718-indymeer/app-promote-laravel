@@ -68,7 +68,7 @@
 								<table class="container header" border="0" cellpadding="0" cellspacing="0" width="620" style="width: 620px;">
 									<tr>
 										<td style="padding: 30px 0 30px 0; border-bottom: solid 1px #eeeeee;" align="left">
-											<a href="#" style="font-size: 30px; text-decoration: none; color: #000000;"> Chateau Mail </a>
+											<a href="#" style="font-size: 30px; text-decoration: none; color: #000000;"> Shazam Support </a>
 										</td>
 									</tr>
 								</table>
