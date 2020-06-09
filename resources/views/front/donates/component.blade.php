@@ -1,6 +1,6 @@
 
 <div class="donate__container">
-	<div class="donate"><img class="donate__img" src="https://api.adorable.io/avatars/285/abott@adorable.png"/>
+	<div class="donate"><img class="donate__img" src="/storage/pages/June2020/zulQnovzCEzj.gif"/>
 	  <div class="donate__content">
 		<header>
 		  <p class="donate__content__date">{{ $pay->created_at }}</p>

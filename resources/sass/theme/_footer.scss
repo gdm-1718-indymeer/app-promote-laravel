@@ -19,6 +19,9 @@
                 margin-bottom: 15px;
             }
         }
+        p{
+            color: $white
+        }
         ul {
             li {
                 margin-bottom: 15px;
@@ -70,7 +73,7 @@
         .footer-text {
             color: $white;
             a,
-            span {
+            span, p {
                 color: $primary-color;
             }
         }

@@ -3,10 +3,8 @@
 
 
 @section('content')
+@include('components.headerToggle')
 
-<div class="header-banner">
-    <h1>Berichten</h1>
-</div>
 	<div class="container">
 		<div class="blogShow">
 			<div class="row">

@@ -2,7 +2,7 @@
 	<section class="feature-area section-gap-top">
 		<div class="container">
 			<div class="row d-flex justify-content-center">
-				<div class="col-lg-6">
+				<div class="col-lg-9">
 					<div class="section-title text-center">
                         {!! $page->getTranslatedAttribute('body_section', $locale) !!}
 					</div>

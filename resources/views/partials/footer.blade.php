@@ -3,26 +3,18 @@
 	<footer class="footer-area section-gap">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-2 col-md-6 single-footer-widget">
+				<div class="col-lg-4 col-md-6 single-footer-widget">
 					<h4>Shazam</h4>
-					<img src=" {{ setting('site.logo') }}" width="100px" >
-				</div>
-				<div class="col-lg-2 col-md-6 single-footer-widget">
-					<h4>Quick Links</h4>
-				{{menu('posts')}}				
-				</div>
-				<div class="col-lg-2 col-md-6 single-footer-widget">
-					<h4>Contact</h4>
-					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
+					<img src=" /{{ setting('site.logo') }}" width="100px" >
 				</div>
 				<div class="col-lg-4 col-md-6 single-footer-widget">
+					<h4>Quick Links</h4>
+				{{menu('posts' , 'partials.footerMenu')}}				
+				</div>
+		
+				<div class="col-lg-4 col-md-6 single-footer-widget">
 					<h4>Newsletter</h4>
-					<p>You can trust us. we only send promo offers,</p>
+					<p>Subscribe now, you can trust us. we only send promo offers.</p>
 					<div class="form-wrap" id="mc_embed_signup">
 						<form target="_blank" action="{{ url('newsletter') }}" method="post" class="form-inline">
 							{{ csrf_field() }}

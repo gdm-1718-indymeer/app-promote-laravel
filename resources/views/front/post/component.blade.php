@@ -10,7 +10,7 @@
                 
             </div>
             <div class="card__img" style="background-image: url( {{ Voyager::image( $post->image ) }})"></div>
-            <a href="/blog/{{ $post->slug }}" class="card_link">
+            <a href="{{ $post->slug }}" class="card_link">
                 <div class="card__img--hover" style="background-image: url( {{ Voyager::image( $post->image ) }})"></div>
             </a>
             <div class="card__info">

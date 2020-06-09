@@ -6,7 +6,6 @@
 
 
 // including variables and mixins
-@import "theme/variables";
 @import "theme/mixins";
 @import "theme/flexbox";
 @import "theme/reset";
@@ -164,27 +163,19 @@ iframe {
 }
 
 .container-contact2 {
-  width: 100%;  
+  width: 100%;
   min-height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: rgba(219,21,99,0.8);
-  background: -webkit-llinear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(200, 154, 82, 0.26));
-  background: -o-linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(200, 154, 82, 0.26));
-  background: -moz-linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(200, 154, 82, 0.26));
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(200, 154, 82, 0.26));
   top: 0;
   left: -100%;
-  -webkit-box-shadow: -1px -8px 26px 0px rgba(0,0,0,0.18);
--moz-box-shadow: -1px -8px 26px 0px rgba(0,0,0,0.18);
-box-shadow: -1px -8px 26px 0px rgba(0,0,0,0.18);
+  /* box-shadow: -2px -4px 3px 0px rgba(0, 0, 0, 0.18); */
+ 
+  background-color: #f6f6f6;
+  
 }
 
 .wrap-contact2 {
@@ -193,7 +184,9 @@ box-shadow: -1px -8px 26px 0px rgba(0,0,0,0.18);
   border-radius: 10px;
   overflow: hidden;
   padding: 72px 55px 90px 55px;
-}
+  box-shadow: -2px 19px 26px 0px rgba(0, 0, 0, 0.18);
+  }
+
 
 
 /*------------------------------------------------------------------
@@ -205,7 +198,7 @@ box-shadow: -1px -8px 26px 0px rgba(0,0,0,0.18);
 
 .contact2-form-title {
   display: block;
-  font-family: Poppins-Bold;
+  font-family: $text-font;
   font-size: 39px;
   color: #333333;
   line-height: 1.2;
@@ -229,7 +222,7 @@ box-shadow: -1px -8px 26px 0px rgba(0,0,0,0.18);
   display: block;
   width: 100%;
 
-  font-family: Poppins-Regular;
+  font-family: $text-font;
   font-size: 15px;
   color: #555555;
   line-height: 1.2;
@@ -274,7 +267,7 @@ box-shadow: -1px -8px 26px 0px rgba(0,0,0,0.18);
   top: 0px;
   left: 0;
 
-  font-family: Poppins-Regular;
+  font-family: $text-font;
   font-size: 13px;
   color: #999999;
   line-height: 1.2;
@@ -378,7 +371,7 @@ textarea.input2 + .focus-input2::after {
 
  
 
-  font-family: Poppins-Medium;
+  font-family: $text-font;
   font-size: 16px;
   color: #fff;
   line-height: 1.2;

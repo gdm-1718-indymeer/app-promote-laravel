@@ -1,10 +1,13 @@
 // Body
-$body-bg: #f8fafc;
-
+$body-bg: #fff;
+$section: #f6f6f6;
 // Typography
 $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+$title-font	: 'Poppins', sans-serif;
+$text-font	: 'Roboto', sans-serif;
+
 
 // Colors
 $blue: #3490dc;
@@ -39,7 +42,7 @@ $border-radius:     4px;
 
 /*--------------------------- Color variations ----------------------*/
 
-$primary-color	: #46dbf9;
+$primary-color	: #08f;
 $primary-color2	: #204be3;
 $title-color	: #222222;
 $text-color		: #777777;

@@ -24,14 +24,15 @@ class blogController extends Controller
             ]
         );
     }
-    public function show($slug)
+    public function show($locale, $slug)
     {
  
+        $page =  \App\Page::where('slug','=','blog')->firstOrFail();
 
         $alert = (object) [];
         if (is_numeric($slug)) {
             $post = \App\Post::find($slug);
-            dd('im here');
+            
   
         } else {
             $post = \App\Post::where('slug', '=' , $slug)->firstOrFail();
@@ -43,6 +44,8 @@ class blogController extends Controller
                 'front.post.show',
                 [
                     'post' => $post,
+                    'locale' => $locale,
+                    'page' => $page,
             
                 ]
             );
