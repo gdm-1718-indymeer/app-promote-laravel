@@ -1,3 +1,5 @@
+ <!-- custom template for the mailchimp page in voyager panel -->
+ 
  @extends('voyager::master')
  @section('page_header')
  <div class="container-fluid">

@@ -6,12 +6,14 @@
 @section('content')
 
 @include('components.headerToggle')
+
 <div class="container">
-<section class="donates_intro">
+    <section class="donates_intro">
         <h2>@lang('donate.header')</h2>
         @include('components.donateBtn')
     </section>
 </div>
+
 <div class="container">
     <section class="row cards flex flex-wrap">
             @foreach ($donates as $pay)

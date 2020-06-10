@@ -10,7 +10,7 @@
 				</div>
 				<div class="col-lg-4 col-md-6 single-footer-widget">
 					<h4>@lang('footer.links')</h4>
-				{{menu('posts' , 'partials.footerMenu')}}				
+					{{menu('posts' , 'partials.footerMenu')}}				
 				</div>
 		
 				<div class="col-lg-4 col-md-6 single-footer-widget">

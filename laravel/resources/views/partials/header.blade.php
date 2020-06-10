@@ -19,5 +19,5 @@
 </head>
 
 <body>
-
-        {{ menu('posts' , 'partials.menu') }}
+ <!-- custom navigation template for header with voyager -->
+    {{ menu('posts' , 'partials.menu') }}

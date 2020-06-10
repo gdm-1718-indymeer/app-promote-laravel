@@ -12,3 +12,5 @@
             @include('components.donateBtn')
 		</div>
 	</section>
+	
+<!-- End Feature Area -->

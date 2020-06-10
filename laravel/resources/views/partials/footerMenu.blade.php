@@ -41,6 +41,7 @@
     
         @endphp
     
+         <!-- Show Menu  -->
         <li class="{{ $isActive }}">
             <a href="{{  url(app()->getLocale() . $item->link()) }}" target="{{ $item->target }}" style="{{ $styles }}">
                 {!! $icon !!}

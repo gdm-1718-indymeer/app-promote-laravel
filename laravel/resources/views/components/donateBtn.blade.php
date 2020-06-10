@@ -1,8 +1,11 @@
+ <!-- Donate Button -->
 
 			<main role="main">
 				<button class="btn-hover color-4 popup-trigger" id="popup-trigger">@lang('donate.donate')</button>
+			</main>
 
-			  </main>
+ <!-- Donate form with overlay -->
+
 			  <div class="overlay" id="overlay">
 				<div class="overlay-background" id="overlay-background"></div>
 				<div class="overlay-content" id="overlay-content">

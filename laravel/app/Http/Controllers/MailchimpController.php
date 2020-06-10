@@ -14,6 +14,8 @@ class MailchimpController extends Controller
 
     public function store(Request $request)
     {
+        // Check if email is subscribed, if not, send email to list id
+
         if ( ! Newsletter::isSubscribed($request->user_email) ) {
             Newsletter::subscribe($request->user_email);
             return redirect('newsletter')->with('status', 'thanks!');
@@ -25,8 +27,10 @@ class MailchimpController extends Controller
 
     public static function showMembers()
     {
-        $total =  Newsletter::getMembers()['total_items'];
 
+        // Show data from the list id
+
+        $total =  Newsletter::getMembers()['total_items'];
         $parameters = ['count' => $total];
         
         return Newsletter::getMembers($string = '', $parameters)['members'];  

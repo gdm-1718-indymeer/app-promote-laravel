@@ -19,15 +19,6 @@
 	</div>
 </div>
 
-  <!--<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-                <h1>{{ $pay->donater_name }}</h1>
-				<h1>{{ $pay->payment_amount }}</h1>
-				<p>{{  $pay->message  }}</p>
-            </div>
-		</div>
-	</div>
--->
+
       
          

@@ -12,6 +12,8 @@ class ShopController extends Controller
 
   public function show($locale)
   {
+    // recieve content from the database and check on slug, give the current Locale to a view from the url tag
+
     $page =  \App\Page::where('slug','=','donates')->firstOrFail();
     $page->translate($locale);
 
@@ -28,6 +30,7 @@ class ShopController extends Controller
 
     public function preparePayment(Request $r )
     {
+    // recieve content from the request and connect with the mollie api with current request values
 
       $payment = Mollie::api()->payments()->create([
         'amount' => [
@@ -38,6 +41,8 @@ class ShopController extends Controller
         'redirectUrl' => url(app()->getLocale() . '/donates'),
          'webhookUrl'   => route('webhooks.mollie'),
       ]);
+
+    // put the values in the database
 
       $donate = new Donate;
       $donate->payment_id = $payment->id;
@@ -56,6 +61,8 @@ class ShopController extends Controller
 
     public function handle(Request $request) {
 
+    // Webhook function to update database if client have paid
+
         if(! $request->has('id') ) {
           return ;
         } 
@@ -71,6 +78,9 @@ class ShopController extends Controller
       }
 
       public function paymentSuccess() {
+
+    // Redirect to Donations page after donated
+
         return \redirect(url(app()->getLocale() . '/donates'));
 
     }

@@ -77,7 +77,7 @@
 </div>
 </div>
 </div>
-<!-- Right Side Of Navbar url($locale, Request::segment(count(Request::segments())) -->
+<!-- Right Side Of Navbar | Languages  -->
 <ul class="language">
     @foreach (config('voyager.multilingual.locales') as $locale)
         <li class="breadcrumb-item">

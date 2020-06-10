@@ -11,10 +11,10 @@ class blogController extends Controller
     public function index($locale)
     {
       
+        // recieve content from the database and check on slug
+
         $page =  \App\Page::where('slug','=','blog')->firstOrFail();
-        //$posts = \App\Post::withTranslations($locale)->paginate($page['pagination']);
         $posts = \App\Post::orderBy('created_at', 'asc')->paginate($page['pagination']);
-       // $posts->withTranslation($locale)->get;
 
         return view(
             'front.post.index',
@@ -28,6 +28,8 @@ class blogController extends Controller
     public function show($locale, $slug)
     {
  
+        // Code for showing the details page of a blog post
+
         $page =  \App\Page::where('slug','=','blog')->firstOrFail();
 
         $alert = (object) [];
@@ -37,7 +39,6 @@ class blogController extends Controller
   
         } else {
             $post = \App\Post::where('slug', '=' , $slug)->firstOrFail();
-   
 
         }
         

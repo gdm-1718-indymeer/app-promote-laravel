@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
 {
+    
+    // recieve content from the database and check on slug, give the current Locale to a view from the url tag
+
     public function index($locale){
         $page = \App\Page::where('slug', 'contact')->firstOrFail();
         return view('front.contact.index', [
@@ -19,6 +22,9 @@ class MailController extends Controller
     }
 
     public function postContact(Request $r){
+
+        // recieve content from the form request and send mail with the given values
+
         $data = [
             'name' => $r->name,
             'email' => $r->email,
