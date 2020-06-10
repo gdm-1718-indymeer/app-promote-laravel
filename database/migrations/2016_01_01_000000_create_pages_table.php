@@ -20,8 +20,15 @@ class CreatePagesTable extends Migration
             $table->string('title');
             $table->text('excerpt')->nullable();
             $table->text('body')->nullable();
+            $table->text('body_header')->nullable();
+            $table->text('body_section')->nullable();
+            $table->text('body_extra')->nullable();
             $table->string('image')->nullable();
             $table->string('slug')->unique();
+            $table->integer('pagination')->nullable();
+            $table->integer('header_big')->nullable();
+            $table->integer('header_small')->nullable();
+            $table->integer('show_contact')->nullable();
             $table->text('meta_description')->nullable();
             $table->text('meta_keywords')->nullable();
             $table->enum('status', Page::$statuses)->default(Page::STATUS_INACTIVE);

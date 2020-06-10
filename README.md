@@ -9,9 +9,26 @@
 
 ## Installation
 
-php artisan migrate:fresh --seed
+Fill in the env file with the right database connection values
+Run:
+- php artisan migrate:fresh
+- php artisan db:seed
 
-php artisan serve
+( If you run in any problem with the foreign key, disable foreign key check in mysql with SET FOREIGN_KEY_CHECKS=0;)
+
+- php artisan serve
+
+## Admin panel
+
+go to the admin panel with just /admin.
+
+The username and password are: 
+- admin@admin.com 
+- wachtwoord
+
+This admin panel has mollie and mailchimp, fill in the api keys in settings and in the .env files before accessing these pages.
+
+Enjoy
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:

@@ -1,29 +1,39 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Str;
-use TCG\Voyager\Models\Role;
-use TCG\Voyager\Models\User;
 
 class UsersTableSeeder extends Seeder
 {
+
     /**
-     * Auto generated seed file.
+     * Auto generated seed file
      *
      * @return void
      */
     public function run()
     {
-        if (User::count() == 0) {
-            $role = Role::where('name', 'admin')->firstOrFail();
+        
 
-            User::create([
-                'name'           => 'Admin',
-                'email'          => 'admin@admin.com',
-                'password'       => bcrypt('password'),
-                'remember_token' => Str::random(60),
-                'role_id'        => $role->id,
-            ]);
-        }
+        \DB::table('users')->delete();
+        
+        \DB::table('users')->insert(array (
+
+            0 => 
+            array (
+                'avatar' => 'users/June2020/hJGKjaiJiWE5Tbf0qBTp.jpg',
+                'created_at' => '2020-06-04 20:28:21',
+                'email' => 'admin@admin.com',
+                'email_verified_at' => NULL,
+                'id' => 2,
+                'name' => 'Admin',
+                'password' => '$2y$10$o0ESdUtivC6c.yRO4iROwehHl9j3/B1XQXEyXby/dODVQ9H8aY94m',
+                'remember_token' => NULL,
+                'role_id' => 1,
+                'settings' => '{"locale":"en"}',
+                'updated_at' => '2020-06-09 18:53:03',
+            ),
+        ));
+        
+        
     }
 }
