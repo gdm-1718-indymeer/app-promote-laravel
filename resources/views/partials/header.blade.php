@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<html lang="{{ app()->getLocale() }}">
+
 <html data-whatinput="keyboard" data-whatintent="keyboard" class=" whatinput-types-initial whatinput-types-keyboard">
 
 <head>

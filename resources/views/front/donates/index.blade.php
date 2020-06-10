@@ -6,7 +6,10 @@
 @section('content')
 
 @include('components.headerToggle')
-
+<section>
+    <h2> Also want to donate? </h2>
+    @include('components.donateBtn');
+</section>
 <div class="container">
     <section class="row cards flex flex-wrap">
             @foreach ($donates as $pay)
@@ -22,6 +25,8 @@
     </div>
     
 </div>
+
+
 
 
 @endsection
