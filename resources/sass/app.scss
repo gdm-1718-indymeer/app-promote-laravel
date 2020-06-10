@@ -338,7 +338,12 @@ textarea.input2 + .focus-input2::after {
   justify-content: center;
   padding-top: 13px;
 }
-
+.donates_intro{
+  margin: 15% 0%;
+  & h2{
+  text-align: center;
+  }
+}
 .wrap-contact2-form-btn {
   display: block;
   position: relative;

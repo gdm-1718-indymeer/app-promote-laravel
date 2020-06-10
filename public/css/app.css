@@ -15665,10 +15665,14 @@ main {
 }
 
 .footer-area .single-footer-widget .subscribebtn {
-  background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+  background-image: #08f;
   width: 40px;
   height: 41px;
   padding: 3px 12px;
+}
+
+.footer-area .single-footer-widget .subscribebtn .fa {
+  color: #fff;
 }
 
 .footer-area .single-footer-widget h4 {
@@ -16374,6 +16378,14 @@ textarea.input2 + .focus-input2::after {
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 13px;
+}
+
+.donates_intro {
+  margin: 15% 0%;
+}
+
+.donates_intro h2 {
+  text-align: center;
 }
 
 .wrap-contact2-form-btn {

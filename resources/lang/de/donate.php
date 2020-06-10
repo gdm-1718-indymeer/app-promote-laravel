@@ -21,5 +21,6 @@ return [
     'message' => 'Nachricht',
     'public' => 'Möchten Sie, dass diese Botschaft öffentlich gezeigt wird?',
     'send' => 'Spenden',
+    'header' => "Wollen Sie auch spenden?"
 
 ];

@@ -21,5 +21,7 @@ return [
     'message' => 'BERICHT',
     'public' => 'Do you want this message shown public?',
     'send' => 'Donate',
+    'header' => "Also want to donate?"
+
 
 ];

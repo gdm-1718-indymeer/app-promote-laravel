@@ -21,5 +21,6 @@ return [
     'message' => 'Bericht',
     'public' => 'Wilt u dit bericht openbaar maken?',
     'send' => 'Donate',
+    'header' => "Wil je ook doneren?"
 
 ];
