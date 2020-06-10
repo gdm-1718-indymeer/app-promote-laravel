@@ -9,7 +9,8 @@
 
 ## Installation
 
-Fill in the env file with the right database connection values
+Fill in the env file with the right values.
+
 Run:
 - php artisan migrate:fresh
 - php artisan db:seed
